@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import Location from './components/location';
+import AlcoholStore from './components/alcohol-store';
 
 class App extends React.Component {
   static navigationOptions = {
@@ -25,10 +27,11 @@ class App extends React.Component {
           <Image source={require('./goose.jpeg')} style={styles.alcoholImage} />
           <Text>Grey Goose</Text>
         </View>
-
+        {/* <Location /> */}
         <TouchableHighlight style={styles.ctaButton} onPress={() => navigate('Results')}>
           <Text style={styles.ctaButtonText}>Boozly Me!</Text>
         </TouchableHighlight>
+        <AlcoholStore />
       </View>
     );
   }
